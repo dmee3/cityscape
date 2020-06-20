@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:11.2-alpine
+    volumes:
+      - cityscape-db-dev:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+  web:
+    build: .
+    command: bin/rails s -p 3000 -b '0.0.0.0'
+    environment:
+      PG_PASSWORD: password
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+volumes:
+  cityscape-db-dev:
