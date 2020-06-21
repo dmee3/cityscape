@@ -1,0 +1,63 @@
+<%= form_with(model: user, local: true, class: 'container') do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row responsive">
+    <div class="column responsive column-50 column-offset-25">
+      <label for="user_username">Username</label>
+      <%= text_field(:user, :username) %>
+    </div>
+  </div>
+
+  <div class="row responsive">
+    <div class="column responsive column-50 column-offset-25">
+      <label for="password">Password</label>
+      <%= password_field_tag(:password) %>
+    </div>
+  </div>
+
+  <div class="row responsive">
+    <div class="column responsive column-50 column-offset-25">
+      <label for="password_confirmation">Confirm Password</label>
+      <%= password_field_tag(:password_confirmation) %>
+    </div>
+  </div>
+
+  <div class="row responsive">
+    <div class="column">
+      <label for="user_first_name">First Name</label>
+      <%= text_field(:user, :first_name) %>
+    </div>
+
+    <div class="column">
+      <label for="user_last_name">Last Name</label>
+      <%= text_field(:user, :last_name) %>
+    </div>
+  </div>
+
+  <div class="row responsive">
+    <div class="column">
+      <label for="user_email">Email</label>
+      <%= text_field(:user, :email) %>
+    </div>
+
+    <div class="column">
+      <label for="user_phone">Phone</label>
+      <%= text_field(:user, :phone) %>
+    </div>
+  </div>
+
+  <div class="actions float-right">
+    <%= link_to 'Back', users_path, class: 'button button-clear' %>
+    <%= form.submit class: 'button' %>
+  </div>
+<% end %>

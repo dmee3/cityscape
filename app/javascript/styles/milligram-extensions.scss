@@ -1,0 +1,15 @@
+.row.responsive {
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 40rem) {
+    flex-wrap: unset;
+  }
+}
+
+.column.responsive {
+  @media screen and (max-width: 40rem) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
