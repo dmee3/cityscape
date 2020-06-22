@@ -33,8 +33,6 @@ body {
 }
 
 section.hero {
-  background: rgb(204,47,68);
-  background: linear-gradient(135deg, rgba(204,47,68,1) 33%, rgba(204,93,47,1) 100%);
   color: #fff;
   margin-bottom: 30px;
   padding: 50px;
@@ -42,5 +40,15 @@ section.hero {
 
   h1 {
     margin-bottom: 0;
+  }
+
+  &.hero-red {
+    background: rgb(204,47,68);
+    background: linear-gradient(135deg, rgba(204,47,68,1) 33%, rgba(204,93,47,1) 100%);
+  }
+
+  &.hero-green {
+    background: rgb(47,204,80);
+    background: linear-gradient(135deg, rgba(47,204,80,1) 33%, rgba(47,204,177,1) 100%);
   }
 }
