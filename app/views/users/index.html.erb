@@ -1,0 +1,34 @@
+<section class="hero hero-red">
+  <h1>Users</h1>
+</section>
+
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name + ' ' + user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><a href="#user-<%= user.id %>-dropdown" class="button button-outline button-small dropdown-toggle">...</a></td>
+      </tr>
+      <div id="user-<%= user.id %>-dropdown" class="dropdown">
+        <ul>
+          <li><%= link_to 'Show', user %></li>
+          <li><%= link_to 'Edit', edit_user_path(user) %></li>
+          <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

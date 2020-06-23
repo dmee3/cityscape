@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#top-bar {
+  border: none;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+
+  a, input {
+    float: right;
+  }
+
+  #settings-btn {
+    background-color: #fff !important;
+    border-radius: .4rem 0 0 .4rem;
+    margin-right: 0;
+  }
+
+  #sign-out-btn {
+    border-radius: 0 .4rem .4rem 0;
+    margin-left: 0;
+  }
+
+  #search-bar {
+    background: #fff;
+    margin-right: 1rem;
+    width: 50%;
+  }
+}
+
+section.hero {
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 50px;
+  width: 100%;
+
+  h1 {
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  &.hero-red {
+    background: rgb(204,47,68);
+    background: linear-gradient(135deg, rgba(204,47,68,1) 33%, rgba(204,93,47,1) 100%);
+  }
+
+  &.hero-green {
+    background: rgb(47,204,80);
+    background: linear-gradient(135deg, rgba(47,204,80,1) 33%, rgba(47,204,177,1) 100%);
+  }
+}
