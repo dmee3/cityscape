@@ -1,5 +1,7 @@
-@import '~milligram';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@import '../styles/milligram-overrides';
-@import '../styles/milligram-extensions';
+@import "../styles/tailwind-extensions";
+
 @import '../styles/custom';
